@@ -30,9 +30,9 @@ class Satelite:
     def tipo_orbita(self):
         if self.altitud<2000:
             return "LEO"
-        if self.altitud>=2000 and self.altitud<34000(self):
+        if self.altitud>=2000 and self.altitud<34000:
             return "MEO"
-        if self.altitud>=34000 and self.altitud<=37000(self):
+        if self.altitud>=34000 and self.altitud<=37000:
             return "GEO"
         if self.altitud>37000:
             return "HEO"
