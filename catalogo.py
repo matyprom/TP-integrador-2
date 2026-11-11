@@ -20,8 +20,8 @@ def crear_catalogo(registros):
         )
         if sat.es_valido():
             lista_satelites.append(sat)
-        else:
-            print(f"Satélite omitido por datos inválidos :{sat.nombre}")
+        # else:
+        #     print(f"Satélite omitido por datos inválidos :{sat.nombre}")
 
     return lista_satelites
         
