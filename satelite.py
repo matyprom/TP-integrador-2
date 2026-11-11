@@ -11,7 +11,7 @@ class Satelite:
             return True
         return False
     def verificar_num_catalogo(self):
-        if int(self.num_catalogo):
+        if isinstance(self.num_catalogo, int):
             return True
         return False
     def verificar_latitud(self):
@@ -20,6 +20,10 @@ class Satelite:
         return False
     def verificar_longitud(self):
         if self.longitud<=180 and self.longitud>=-180:
+            return True
+        return False
+    def es_valido(self):
+        if self.verificar_nombre() and self.verificar_num_catalogo() and self.verificar_latitud() and self.verificar_longitud() and self.verificar_altitud():
             return True
         return False
 

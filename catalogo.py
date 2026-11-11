@@ -18,7 +18,10 @@ def crear_catalogo(registros):
             longitud=lon,
             altitud=alt
         )
-        lista_satelites.append(sat)
+        if sat.es_valido():
+            lista_satelites.append(sat)
+        else:
+            print(f"Satélite omitido por datos inválidos :{sat.nombre}")
 
     return lista_satelites
         
@@ -61,9 +64,10 @@ def obtener_satelites(lista_satelites, longitud_mínima, latitud_mínima, longit
     return dentro
 
 
-# janson=leer_json("datos/satelites.json")
-# catalogo=crear_catalogo(janson)
-# resumen=crear_resumen(catalogo)
+janson=leer_json("datos/satelites.json")
+catalogo=crear_catalogo(janson)
+resumen=crear_resumen(catalogo)
+print(resumen)
 # satelites=obtener_satelites(catalogo, 30, -5, 120, 30)
 
 # for zona in satelites:
